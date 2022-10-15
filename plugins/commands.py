@@ -116,6 +116,7 @@ async def start(client, message):
     await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('CLEAR MOVIES', url='https://t.me/clear_movies') ] ] ),
         caption=f_caption,
         )
                     
